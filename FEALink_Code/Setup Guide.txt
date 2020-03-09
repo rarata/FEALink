@@ -1,0 +1,19 @@
+Ryan Arata
+How to set up app using py2app
+
+py2applet -—make-setup FEALink\ GUI.py
+rm -rf build dist
+	# this just gets rid of old stuff
+vim setup.py
+	# change OPTIONS = {‘argv-emulation’:True} to
+	# OPTIONS = {‘argv-emulation’:False}
+	# save and exit vim with :wq
+python setup.py py2app
+	# tada!
+
+
+How to build with cxfreeze
+
+rm -rf build dist
+cxfreeze FEALink.py
+	# that’s it.  have a nice day
